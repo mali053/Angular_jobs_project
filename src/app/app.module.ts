@@ -6,6 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { MainComponentComponent } from './components/main-component/main-component.component';
+import { LoginService } from './services/login.service';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { Router } from 'express';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,8 @@ import { MainComponentComponent } from './components/main-component/main-compone
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [
     provideClientHydration()

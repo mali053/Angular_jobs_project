@@ -3,6 +3,6 @@
     <form>
         <input type="text" placeholder="Enter your username" name="username" [(ngModel)]="username" required><br>
         <input type="password" placeholder="Enter your password" name="password" [(ngModel)]="password" required><br>
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" (click)="userExist()">
     </form>
 </div>
