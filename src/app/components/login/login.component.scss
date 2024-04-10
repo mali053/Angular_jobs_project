@@ -1,49 +1,49 @@
+/* Styles for the user login form */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
     margin: 0;
     padding: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background-color: #f0f0f0;
 }
 
 .login-container {
-    background-color: #fff;
-    padding: 40px;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.login-container h1 {
-    margin-top: 0;
+h1 {
     text-align: center;
     color: #333;
 }
 
-.login-container form {
-    text-align: center;
+form {
+    margin-top: 20px;
 }
 
-.login-container input {
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
     width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 25px;
+    padding: 8px;
+    margin-bottom: 10px;
     box-sizing: border-box;
-    font-size: 16px;
 }
 
-.login-container input[type="submit"] {
+input[type="submit"] {
     background-color: #007bff;
     color: #fff;
-    cursor: pointer;
     border: none;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.login-container input[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color: #0056b3;
 }
