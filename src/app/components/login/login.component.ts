@@ -12,17 +12,11 @@ export class LoginComponent {
 
   username?: string
   password?: string
+  
   user?: User
 
-  userExist(){
+  userExist(): void {
     this.loginService.getUserByNameAndPassword(this.username, this.password)
-      .subscribe((user: User | null) => {
-        if (user === null) {
-          alert('User not found');
-        } else {
-          this.user = user;
-          alert('User found: ' + JSON.stringify(this.user));
-        }
-      });
+      .subscribe();
   }
 }

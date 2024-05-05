@@ -1,8 +1,9 @@
 <div class="login-container">
     <h1>Login</h1>
-    <form>
+    <form #loginForm="ngForm" (ngSubmit)="userExist()">
         <input type="text" placeholder="Enter your username" name="username" [(ngModel)]="username" required><br>
-        <input type="password" placeholder="Enter your password" name="password" [(ngModel)]="password" required><br>
-        <input type="submit" value="Login" (click)="userExist()">
+        <input type="password" placeholder="Enter your password" name="password" [(ngModel)]="password" required minlength="8"><br>
+        <div *ngIf="loginForm.controls['password'] && !loginForm.controls['password'].valid && loginForm.controls['password'].touched">your password is not valid</div>
+        <input type="submit" value="Login" [disabled]="!loginForm.valid">
     </form>
 </div>
