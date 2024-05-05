@@ -1,4 +1,4 @@
-import { JobFileds } from "./jobFileds"
+import { jobFields } from "./jobFileds"
 
 export interface User{
     username: any
@@ -6,5 +6,5 @@ export interface User{
     id:number
     userName:string
     password:string
-    jobSeaarchFilesd:JobFileds
+    jobSeaarchFilesd:jobFields
 }
