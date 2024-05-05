@@ -1,0 +1,53 @@
+/* Container for job details */
+.job-details-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid #4287f5;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+/* Individual detail items */
+.job-details-item {
+  margin-bottom: 10px;
+}
+
+/* Label for detail items */
+.job-details-label {
+  font-weight: bold;
+  color: #4287f5;
+}
+
+/* Show/hide details button */
+.show-details-button,
+.hide-details-button {
+  margin-top: 10px;
+}
+
+/* Styling for buttons */
+.show-details-button button,
+.hide-details-button button,
+.send-cv-button{
+  padding: 10px 20px;
+  background-color: #4287f5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-cv-button {
+  background-color: #34c759;
+}
+
+/* Hover effect for buttons */
+.show-details-button button:hover,
+.hide-details-button button:hover,
+.send-cv-button:hover {
+  background-color: #2a61db;
+}
+
+/* Hide class for hiding elements */
+.hide {
+  display: none;
+}

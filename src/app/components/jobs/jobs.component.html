@@ -1,0 +1,8 @@
+<div *ngIf="jobsList.length > 0">
+  <ul class="job-list">
+    <li *ngFor="let job of jobsList" class="job-list-item">
+      <app-job [jobData]="job"></app-job>
+    </li>
+  </ul>
+</div>
+<div *ngIf="jobsList.length === 0" class="loading-message">Loading...</div>

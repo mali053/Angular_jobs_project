@@ -1,7 +1,7 @@
-import { JobFileds } from "./jobFileds"
+import { jobFields } from "./jobFileds"
 
 export interface Job{
-    jobFileds:JobFileds
+    jobField:jobFields
     name:string
     scopeOfHours:number
     area:string

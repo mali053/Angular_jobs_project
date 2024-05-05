@@ -1,0 +1,20 @@
+/* Styles for the list of jobs */
+.job-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .job-list-item {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  /* Styles for the loading message */
+  .loading-message {
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+  }
+  

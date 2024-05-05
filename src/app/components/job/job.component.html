@@ -1,0 +1,27 @@
+<div class="job-details-container">
+  <div class="job-details-item">
+    <span class="job-details-label">Job Title:</span> {{ jobData!.name }}
+  </div>
+  <div class="job-details-item">
+    <span class="job-details-label">Job Field:</span> {{getField() }}
+  </div>
+  <div class="job-details-item">
+    <span class="job-details-label">Scope of Hours:</span> {{ jobData!.scopeOfHours }}
+  </div>
+  <div class="job-details-item">
+    <span class="job-details-label">Area:</span> {{ jobData!.area }}
+  </div>
+  <div *ngIf="!showDetails" class="show-details-button">
+    <button (click)="showDetails = true">Show details</button>
+  </div>
+  <div *ngIf="showDetails" class="hide-details-button">
+    <button (click)="showDetails = false">Hide details</button>
+    <div class="job-details-item">
+      <span class="job-details-label">Requirements:</span> {{ jobData!.requirements }}
+    </div>
+    <div class="job-details-item">
+      <span class="job-details-label">WorkingFromHome:</span> {{ jobData!.workingFromHome ? 'Yes' : 'No' }}
+    </div>
+  </div>
+</div>
+<button type="button" class="send-cv-button" (click)="addCV()">Send CV</button>
