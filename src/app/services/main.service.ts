@@ -12,22 +12,34 @@ export class MainService {
 
   getCurrentUserName()
   {
-    const userString = localStorage.getItem('user');
+    try{
+      const userString = localStorage.getItem('user');
     if (userString) {
       const userObj = JSON.parse(userString);
       return userObj.userName;
-    } else {
+    }
+    else {
+      return "guest";
+    }
+    }
+    catch (e)  {
       return "guest";
     }
   }
 
   getJobFieldToSearch()
   {
-    const userString = localStorage.getItem('user');
-    if (userString) {
-      const userObj = JSON.parse(userString);
-      return jobFields[userObj.jobSearchField];
-    } else {
+    try{
+      const userString = localStorage.getItem('user');
+      if (userString) {
+        const userObj = JSON.parse(userString);
+        return jobFields[userObj.jobSearchField];
+      }
+      else{
+        return "";
+      }
+    } 
+    catch (e) {
       return "";
     }
   }

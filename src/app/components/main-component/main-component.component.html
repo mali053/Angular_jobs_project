@@ -4,7 +4,8 @@
         <h1>hello {{getUserName()}}</h1>
       </li>
       <li>
-        <h2><a href="">{{getJobField()}}</a></h2>
+        <h2 (click)="filter()"><a [routerLink]="['/jobs', getJobField()]">Search by: {{ getJobField() }}</a>
+        </h2>
       </li>
       <li>
         <h2>count of CV you send: {{numOfCV}}</h2>

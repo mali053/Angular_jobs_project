@@ -1,0 +1,15 @@
+.form-container {
+  display: flex;
+  align-items: center;
+}
+
+input, select, button {
+  margin: 5px;
+  padding: 5px;
+}
+
+button {
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}

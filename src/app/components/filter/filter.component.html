@@ -1,0 +1,12 @@
+<button (click)="showSearch()">🔎</button>
+<div *ngIf="search">
+    <form ngForm class="form-container">
+        <input type="text" [(ngModel)]="area" name="area" placeholder="search by area">
+        <select type="type" [(ngModel)]="field" name="field">
+            <option value="" disabled selected>search by job field</option>
+            <option value="">----</option>
+            <option *ngFor="let option of getField()" [ngValue]="option">{{option}}</option>
+        </select>
+        <button type="submit" (click)="filter()">Search</button>
+    </form>
+</div>
