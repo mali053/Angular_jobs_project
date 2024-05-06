@@ -13,6 +13,8 @@ import { MainComponentComponent } from './components/main-component/main-compone
 import { JobComponent } from './components/job/job.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { CommonModule } from '@angular/common';
+import { FilterComponent } from './components/filter/filter.component';
+import { JobPageComponent } from './components/job-page/job-page.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { CommonModule } from '@angular/common';
     MainComponentComponent,
     JobComponent,
     JobsComponent,
+    FilterComponent,
+    JobPageComponent,
     
   ],
   imports: [
