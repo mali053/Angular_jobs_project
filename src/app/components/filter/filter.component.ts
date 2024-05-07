@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { jobFields } from '../../models/jobFileds';
 
 @Component({
@@ -12,6 +13,16 @@ export class FilterComponent {
 
   @Input() search: boolean = false;
   @Output() filterChange: EventEmitter<any> = new EventEmitter<any>();
+
+  constructor(private activeRouter: ActivatedRoute){}
+
+  // ngOnInit(): void {
+  //   this.activeRouter.paramMap.subscribe(params => {
+  //     let jobFiled = params.get('field');
+  //     if (jobFiled != null)
+  //       this.filterChange.emit({area: null,field: jobFiled});
+  //   })
+  // }
 
   filter() {
     this.filterChange.emit({ area: this.area, field: this.field });

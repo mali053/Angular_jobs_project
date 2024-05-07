@@ -2,6 +2,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { JobService } from '../../services/job.service';
 import { MainService } from '../../services/main.service';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-main-component',
