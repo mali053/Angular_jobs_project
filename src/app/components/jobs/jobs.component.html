@@ -15,6 +15,7 @@
 
 <div *ngIf="showCVList">
   <div *ngIf="CVList.length > 0">
+    <h1>CV that you sent:</h1>
     <ul class="job-list">
       <li *ngFor="let job of CVList" class="job-list-item">
         <app-job [jobData]="job" (jobCV)="jobCV($event)"></app-job>
