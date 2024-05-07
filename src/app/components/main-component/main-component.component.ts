@@ -2,8 +2,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { JobService } from '../../services/job.service';
 import { MainService } from '../../services/main.service';
-import { RouterModule } from '@angular/router';
-
 
 @Component({
   selector: 'app-main-component',
@@ -26,8 +24,6 @@ export class MainComponentComponent implements OnInit {
     }
   }
 
-  @Output('filterChange') filterChange: EventEmitter<any> = new EventEmitter<any>()
-
   getUserName(): string {
     return this.mainService.getCurrentUserName();
   }
@@ -37,16 +33,7 @@ export class MainComponentComponent implements OnInit {
   }
 
   UserIsLoggedIn(): boolean {
-    try {
-      const userString = localStorage.getItem('user');
-      return !!userString;
-    } catch (e) {
-      return false;
-    }
-  }
-
-  filter(){
-    this.filterChange.emit(this.getJobField());
+    return this.mainService.UserIsLoggedIn()
   }
 }
 

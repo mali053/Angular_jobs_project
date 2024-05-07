@@ -1,33 +1,33 @@
 <header>
-    <ul>
-      <li>
-        <h1>hello {{getUserName()}}</h1>
-      </li>
-      <li>
-        <h2 (click)="filter()"><a [routerLink]="['/jobs', getJobField()]">Search by: {{ getJobField() }}</a>
-        </h2>
-      </li>
-      <li>
-        <h2>count of CV you send: {{numOfCV}}</h2>
-      </li>
-      <li>
-        <a [routerLink]="'/login'"><img src="../../../assets/אימוגי.jpg" alt=""></a>
-      </li>
-    </ul>
-  </header>
-  <router-outlet></router-outlet>
+  <ul>
+    <li>
+      <h1>hello {{getUserName()}}</h1>
+    </li>
+    <li>
+      <h2><a [routerLink]="['/jobs', getJobField()]">Search by: {{ getJobField() }}</a>
+      </h2>
+    </li>
+    <li>
+      <h2>count of CV you send: {{numOfCV}}</h2>
+    </li>
+    <li>
+      <a [routerLink]="'/login'"><img src="../../../assets/אימוגי.jpg" alt=""></a>
+    </li>
+  </ul>
+</header>
+<router-outlet></router-outlet>
 
-  <footer>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="contact-details">
-      <p>Email: example.example.com</p>
-      <p>Phone: +1 123 456 789</p>
-    </div>
-  </footer>
+<footer>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="contact-details">
+    <p>Email: example.example.com</p>
+    <p>Phone: +1 123 456 789</p>
+  </div>
+</footer>

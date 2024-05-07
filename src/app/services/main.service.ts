@@ -10,37 +10,42 @@ export class MainService {
 
   constructor() { }
 
-  getCurrentUserName()
-  {
-    try{
+  getUserFromStorage(): any | null {
+    try {
       const userString = localStorage.getItem('user');
-    if (userString) {
-      const userObj = JSON.parse(userString);
-      return userObj.userName;
-    }
-    else {
-      return "guest";
-    }
-    }
-    catch (e)  {
-      return "guest";
+      if (userString) {
+        return JSON.parse(userString);
+      }
+      return null;
+    } catch (error) {
+      return null;
     }
   }
 
-  getJobFieldToSearch()
-  {
-    try{
-      const userString = localStorage.getItem('user');
-      if (userString) {
-        const userObj = JSON.parse(userString);
-        return jobFields[userObj.jobSearchField];
-      }
-      else{
-        return "";
-      }
-    } 
-    catch (e) {
+  getCurrentUserName(): string {
+    const userObj = this.getUserFromStorage();
+    if (userObj && userObj.userName) {
+      return userObj.userName;
+    }
+    return "guest";
+  }
+
+  getJobFieldToSearch() {
+    const userObj = this.getUserFromStorage();
+    if (userObj && userObj.jobSearchField) {
+      return jobFields[userObj.jobSearchField];
+    }
+    else {
       return "";
+    }
+  }
+
+  UserIsLoggedIn(): boolean {
+    try {
+      const userString = localStorage.getItem('user');
+      return !!userString;
+    } catch (e) {
+      return false;
     }
   }
 }
