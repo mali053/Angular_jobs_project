@@ -12,10 +12,10 @@
     <span class="job-details-label">Area:</span> {{ jobData!.area }}
   </div>
   <div *ngIf="!showDetails" class="show-details-button">
-    <button (click)="showDetails = true">Show details</button>
+    <button appBackground (click)="showDetails = true">Show details</button>
   </div>
   <div *ngIf="showDetails" class="hide-details-button">
-    <button (click)="showDetails = false">Hide details</button>
+    <button appBackground (click)="showDetails = false">Hide details</button>
     <div class="job-details-item">
       <span class="job-details-label">Requirements:</span> {{ jobData!.requirements }}
     </div>
@@ -24,4 +24,4 @@
     </div>
   </div>
 </div>
-<button type="button" class="send-cv-button" (click)="addCV()">Send CV</button>
+<button appBackground type="button" class="send-cv-button" (click)="addCV()">Send CV</button>

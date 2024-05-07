@@ -4,7 +4,7 @@
         <input type="text" placeholder="Enter your username" name="username" [(ngModel)]="username" required><br>
         <input type="password" placeholder="Enter your password" name="password" [(ngModel)]="password" required pattern="^\S{8,}$"><br>
         <div *ngIf="loginForm.controls['password'] && !loginForm.controls['password'].valid && loginForm.controls['password'].touched">
-            <span style="color: red;">Password must be at least 8 characters long and not contain spaces.</span>
+            <span appRedColor>Password must be at least 8 characters long and not contain spaces.</span>
         </div>
         <input type="submit" value="Login" [disabled]="!loginForm.valid">
     </form>

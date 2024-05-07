@@ -1,49 +1,48 @@
-/* Styles for the user login form */
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-}
-
 .login-container {
     width: 300px;
+    margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
 
-h1 {
+.login-container h1 {
     text-align: center;
-    color: #333;
+    margin-bottom: 20px;
 }
 
-form {
-    margin-top: 20px;
+.login-container form {
+    display: flex;
+    flex-direction: column;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="submit"] {
-    width: 100%;
-    padding: 8px;
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    padding: 10px;
     margin-bottom: 10px;
-    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
+.login-container input[type="submit"] {
+    padding: 10px 20px;
+    margin-top: 10px;
     border: none;
     border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.login-container input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+    font-size: 14px;
 }
