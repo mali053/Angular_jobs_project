@@ -12,21 +12,14 @@ import { JobsService } from '../../services/jobs.service';
 export class JobsComponent{
 
   @Input() jobsList: Job[] = [];
+  @Input() CVList: Job[] = [];
+  showCVList: boolean = false;
 
-  // constructor(private jobsService: JobsService){
-  //   this.jobsList = jobsService.jobList;
-  // }
-  // ngOnInit(): void {
-  //   this.jobsService.getJobsFromServer()
-  // }
+  jobCV($event: any){
+    this.CVList.push($event);
+ }
 
-//   getJobs(){
-//     this.jobsService.getJobsFromServer().subscribe((jobs: Job[]) => {
-//     this.jobsList = jobs;
-//   })
-// }
-
-  // getJobField(){
-  //   return jobFields
-  // }
+ ShowCVList(){
+  this.showCVList = !this.showCVList
+ }
 }

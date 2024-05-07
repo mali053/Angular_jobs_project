@@ -14,6 +14,7 @@ export class JobComponent {
   constructor(private jobService: JobService){}
 
   @Input('jobData') jobData:Job| null = null
+  @Output() jobCV: EventEmitter<any> = new EventEmitter<any>();
   jobFileds = jobFields
   showDetails: boolean =false;
   sendCV: boolean = false;
@@ -34,6 +35,7 @@ export class JobComponent {
     if(!this.sendCV){
       this.jobService.addCV()
       this.sendCV = true;
+      this.jobCV.emit(this.jobData)
     }
     else
       alert('You have already sent a CV for this position')

@@ -1,8 +1,25 @@
-<div *ngIf="jobsList.length > 0">
-  <ul class="job-list">
-    <li *ngFor="let job of jobsList" class="job-list-item">
-      <app-job [jobData]="job"></app-job>
-    </li>
-  </ul>
+<button (click)="ShowCVList()">
+  {{ showCVList ? "Come back to the jobs list" : "List of resumes you sent" }}
+</button>
+<div *ngIf="!showCVList">
+  <div *ngIf="jobsList.length > 0">
+    <ul class="job-list">
+      <li *ngFor="let job of jobsList" class="job-list-item">
+        <app-job [jobData]="job" (jobCV)="jobCV($event)"></app-job>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="jobsList.length === 0" class="loading-message">sorry, we have no jobs matching your search</div>
 </div>
-<div *ngIf="jobsList.length === 0" class="loading-message">Loading...</div>
+
+
+<div *ngIf="showCVList">
+  <div *ngIf="CVList.length > 0">
+    <ul class="job-list">
+      <li *ngFor="let job of CVList" class="job-list-item">
+        <app-job [jobData]="job" (jobCV)="jobCV($event)"></app-job>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="CVList.length === 0" class="loading-message">you still not sent resumes</div>
+</div>
