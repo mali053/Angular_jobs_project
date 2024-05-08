@@ -13,5 +13,4 @@ export class BackgroundDirective {
   @HostListener('mouseleave') onMouseLeave() {
     this.backgroundColor = '#34c759';
   }
-
 }

@@ -16,14 +16,6 @@ export class FilterComponent {
 
   constructor(private activeRouter: ActivatedRoute){}
 
-  // ngOnInit(): void {
-  //   this.activeRouter.paramMap.subscribe(params => {
-  //     let jobFiled = params.get('field');
-  //     if (jobFiled != null)
-  //       this.filterChange.emit({area: null,field: jobFiled});
-  //   })
-  // }
-
   filter() {
     this.filterChange.emit({ area: this.area, field: this.field });
   }
